@@ -1,0 +1,15 @@
+diff --git a/node_modules/typedoc/dist/lib/converter/types.js b/node_modules/typedoc/dist/lib/converter/types.js
+index cc8beef..c8ba7ad 100644
+--- a/node_modules/typedoc/dist/lib/converter/types.js
++++ b/node_modules/typedoc/dist/lib/converter/types.js
+@@ -451,6 +451,10 @@ const referenceConverter = {
+             ref.refersToTypeParameter = true;
+             return ref;
+         }
++
++        if (symbol.name === "Handler") {
++            return typeLiteralConverter.convertType(context, type);
++        }
+         let name;
+         if (typescript_1.default.isIdentifier(node.typeName)) {
+             name = node.typeName.text;

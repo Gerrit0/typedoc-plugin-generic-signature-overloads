@@ -1,0 +1,39 @@
+{
+  "name": "typedoc-plugin-generic-signature-overloads",
+  "version": "0.0.0",
+  "main": "dist/plugin.js",
+  "license": "MIT",
+  "dependencies": {
+    "patch-package": "^8.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "typedoc": "^0.26.0",
+    "typescript": "5.6.2",
+    "vitest": "^2.1.1"
+  },
+  "peerDependencies": {
+    "typedoc": "0.26.x",
+    "typescript": "5.6.2"
+  },
+  "keywords": [
+    "typedoc-plugin"
+  ],
+  "files": [
+    "dist/plugin.js",
+    "patches/typescript+5.6.2.patch"
+  ],
+  "scripts": {
+    "lint": "prettier --check .",
+    "build": "tsc",
+    "test": "vitest run",
+    "postinstall": "patch-package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gerrit0/typedoc-plugin-generic-signature-overloads.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gerrit0/typedoc-plugin-generic-signature-overloads/issues"
+  }
+}
